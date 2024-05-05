@@ -2,11 +2,11 @@
 
 describe("Successfully Login the User", () => {
     it("passes", () => {
-      cy.visit("http://3.85.193.80:3000/");
+      cy.visit("http://44.220.138.207:3000/");
       cy.get('[id="loginsignup-btn"]').click();
-      cy.url().should("eq", "http://3.85.193.80:3000/login");
-      cy.get("[id=email]").type("abc@gmail.com");
-      cy.get("[id=password]").type("abc");
+      cy.url().should("eq", "http://44.220.138.207:3000/login");
+      cy.get("[id=email]").type("sai@gmail.com");
+      cy.get("[id=password]").type("1234");
       cy.get('[id="submit"]').click();
       cy.url().should("include", "/");
       cy.window().its("localStorage").invoke("getItem", "token").should("exist");
